@@ -1,9 +1,8 @@
 # encoding: UTF-8
-version = File.read(File.expand_path("../VERSION", __FILE__)).strip
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_cycle'
-  s.version     =  version
+  s.version     =  '1.1.1'
   s.summary     = 'spree cycle images'
   s.description = 'slideshow images for spree'
   s.required_ruby_version = '>= 1.8.7'
@@ -15,7 +14,7 @@ Gem::Specification.new do |s|
   #s.files       = `git ls-files`.split("\n")
   #s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
-  s.requirements << 'none'
+  s.requirements << 'none', '~> 1.1.1'
 
   s.add_dependency 'spree_core', version
 end
