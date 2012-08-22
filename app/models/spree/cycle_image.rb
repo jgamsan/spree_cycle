@@ -2,7 +2,7 @@ class Spree::CycleImage < ActiveRecord::Base
   has_attached_file :image,
                     :url => "/spree/cycle_images/:id/:style/:basename.:extension",
                     :path => ":rails_root/public/spree/cycle_images/:id/:style/:basename.:extension",
-                    :styles => { :thumb => "700x150>" }
+                    :styles => { :medium => "700x150>", :thumb => "175x37>" }
   acts_as_list
 
   default_scope :order => 'position ASC'
