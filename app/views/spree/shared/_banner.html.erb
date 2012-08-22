@@ -1,5 +1,5 @@
 <ul id="homepage_cycle">
-  <% cycle_images.each do |cycle_image| %>
+  <% Spree::CycleImage.all.each do |cycle_image| %>
     <li>
       <%= image_tag(cycle_image.image.url) %>
     </li>
