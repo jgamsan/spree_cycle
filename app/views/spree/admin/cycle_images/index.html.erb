@@ -5,7 +5,6 @@
   <tr>
     <th><%= t("image") %></th>
     <th><%= t("description") %></th>
-    <th><%= t("link") %></th>
     <th>&nbsp;</th>
   </tr>
   </thead>
@@ -14,12 +13,11 @@
       <tr id="<%= dom_id cycle_image %>">
         <td><%= image_tag cycle_image.image.url(:thumb) %></td>
         <td><%= cycle_image.description %></td>
-        <td><%= cycle_image.link %></td>
         <td>
             <%= link_to_edit cycle_image %> &nbsp;
             <%= link_to_delete cycle_image %> &nbsp;
-            <%= link_to image_tag('admin/icons/up.gif') + 'Move Up', move_up_admin_cycle_image_path(cycle_image), :method => :post %>
-            <%= link_to image_tag('admin/icons/arrow-down.gif') + 'Move Down', move_down_admin_cycle_image_path(cycle_image), :method => :post %>
+            <%= link_to image_tag('admin/icons/up.gif') + 'Subir', move_up_admin_cycle_image_path(cycle_image), :method => :post %>
+            <%= link_to image_tag('admin/icons/arrow-down.gif') + 'Bajar', move_down_admin_cycle_image_path(cycle_image), :method => :post %>
         </td>
       </tr>
     <% end %>

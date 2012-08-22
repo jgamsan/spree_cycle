@@ -1,0 +1,6 @@
+es:
+  image: "Imagen"
+  description: "Descripción"
+  listing_cycle_images: "Listado Imagenes en Banner"
+  new_cycle_image: "Nueva Imagen"
+  editing_cycle_image: "Editando Imagen"
