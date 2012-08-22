@@ -9,5 +9,5 @@ class Spree::CycleImage < ActiveRecord::Base
   attr_accessible :image, :description
 
   validates :description, :length => { :minimum => 2, :maximum => 255 }, :allow_blank => true
-  validates :link, :length => { :minimum => 2, :maximum => 255 }, :allow_blank => true
+  #validates :link, :length => { :minimum => 2, :maximum => 255 }, :allow_blank => true
 end
