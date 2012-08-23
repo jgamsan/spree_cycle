@@ -6,7 +6,8 @@ class Spree::CycleImagesController < Spree::BaseController
   def index
     @searcher = Spree::Config.searcher_class.new(:in_offert => true)
     @products = @searcher.retrieve_products
-    @cycle_images = Spree::CycleImage.all
+    respond_with(@products)
+    #@cycle_images = Spree::CycleImage.all
   end
 
 end
