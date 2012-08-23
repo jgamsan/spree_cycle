@@ -4,10 +4,8 @@ class Spree::CycleImagesController < Spree::BaseController
   respond_to :html
 
   def index
-    #@searcher = Spree::Config.searcher_class.new(:in_offert => true)
-    #@products = @searcher.retrieve_products
-    @products = Spree::Product.in_offert(true).page(params[:page]).per(12)
-    #respond_with(@products)
+    @searcher = Spree::Config.searcher_class.new(:in_offert => true)
+    @products = @searcher.retrieve_products
     @cycle_images = Spree::CycleImage.all
   end
 
