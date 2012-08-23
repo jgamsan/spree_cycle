@@ -1,13 +1,14 @@
-class Spree::CycleImagesController < Spree::BaseController
+module Spree
+  class CycleImagesController < BaseController
 
-  helper 'spree/products'
-  respond_to :html
+    helper 'spree/products'
+    respond_to :html
 
-  def index
-    @searcher = Spree::Config.searcher_class.new(:in_offert => true)
-    @products = @searcher.retrieve_products
-    respond_with(@products)
-    #@cycle_images = Spree::CycleImage.all
+    def index
+      @searcher = Spree::Config.searcher_class.new(:in_offert => true)
+      @products = @searcher.retrieve_products
+      respond_with(@products)
+    end
+
   end
-
 end
