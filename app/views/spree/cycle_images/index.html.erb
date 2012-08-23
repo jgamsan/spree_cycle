@@ -1,4 +1,10 @@
-<% content_for :banner do -%>
+<% content_for :sidebar do %>
+  <div data-hook="homepage_sidebar_navigation">
+    <%= render :partial => 'spree/shared/taxonomies' %>
+  </div>
+<% end %>
+
+<div id="banner" class="row" data-hook="products_banner">
   <ul id="homepage_cycle">
     <% @cycle_images.each do |cycle_image| %>
       <li>
@@ -6,7 +12,13 @@
       </li>
     <% end %>
   </ul>
-<% end -%>
+</div>
+
+<div id="offerts" class="row" data-hook="products_in_offert">
+  <h3>Listado de Productos en Oferta</h3>
+  <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+</div>
+
 <script>
   $('#homepage_cycle').cycle();
 </script>
