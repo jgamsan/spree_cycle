@@ -15,8 +15,13 @@
 </div>
 
 <div id="offerts" class="row" data-hook="products_in_offert">
-  <h3 style="text-align:center;">Listado de Productos en Oferta</h3>
-  <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+  <div class="columns nine alpha">
+    <h3 style="text-align:center;">Listado de Productos en Oferta</h3>
+    <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+  </div>
+  <div class="columns ten omega">
+    <h5>mas info</h5>
+  </div>
 </div>
 
 <script>
