@@ -15,17 +15,8 @@
 </div>
 
 <div id="offerts" class="row" data-hook="products_in_offert">
-  <div class="columns nine alpha">
-    <div class="row">
-      <h3 style="text-align:center;">Listado de Productos en Oferta</h3>
-      <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
-    </div>
-  </div>
-  <div class="columns three omega">
-    <div class="row">
-      <h5>mas info</h5>
-    </div>
-  </div>
+  <h3 style="text-align:center;">Listado de Productos en Oferta</h3>
+  <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
 </div>
 
 <script>
